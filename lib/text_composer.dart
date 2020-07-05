@@ -35,7 +35,7 @@ class _TextComposerState extends State<TextComposer> {
             onPressed: () async {
               final picker = ImagePicker();
               final pickedFile =
-                  await picker.getImage(source: ImageSource.gallery);
+                  await picker.getImage(source: ImageSource.camera);
               File imgFile = File(pickedFile.path);
               if (imgFile == null) return;
               widget.sendMessage(imgFile: imgFile);
